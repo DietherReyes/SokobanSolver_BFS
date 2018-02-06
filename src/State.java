@@ -1,20 +1,21 @@
+import java.util.ArrayList;
 public class State{
     
     //current state of the board
-    private String[][] currentState;
+    private Tiles[][] currentState;
 
     //parent state of this state
-    private String[][] parentState;
+    private Tiles[][] parentState;
 
     //position of keeper
     private int xpos_keeper;
     private int ypos_keeper;
 
     //actions needed to arrive to this state from the initial state
-    private String actions;
+    private  ArrayList<Integer> actions;
 
     //constructor
-    public State(String[][] currentState, String[][] parentState, int x_keeper, int y_keeper, String actions){
+    public State(Tiles[][] currentState, Tiles[][] parentState, int xpos_keeper, int ypos_keeper, ArrayList<Integer> actions){
         this.currentState = currentState;
         this.parentState = parentState;
         this.xpos_keeper = xpos_keeper;
@@ -23,11 +24,11 @@ public class State{
     }
 
     //getters
-    public String[][] getCurrentState(){
+    public Tiles[][] getCurrentState(){
         return this.currentState;
     }
 
-    public String[][] getParentState(){
+    public Tiles[][] getParentState(){
         return this.parentState;
     }
 
@@ -39,7 +40,7 @@ public class State{
         return this.ypos_keeper;
     }
 
-    public String getActions(){
+    public ArrayList<Integer> getActions(){
         return this.actions;
     }
 

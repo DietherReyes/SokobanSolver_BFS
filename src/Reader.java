@@ -14,7 +14,7 @@ public class Reader{
 
 	//input file to be read
 	private String filename;
-	private String[][] currentState;
+	private Tiles[][] board;
 	
 	//coordinated of the keeper
 	private int xpos_keeper;
@@ -29,7 +29,7 @@ public class Reader{
 	
 
 	//reads file and returns a 2d array
-	public String[][] readFile(){
+	public Tiles[][] readFile(){
 
 		try{
 			//reader per line
